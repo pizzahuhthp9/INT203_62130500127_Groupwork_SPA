@@ -4,7 +4,7 @@
     class="w-full rounded-lg shadow-sm flex justify-between px-4"
   >
     <div class="flex space-x-2">
-      <p class="text-sm">{{ message }}</p>
+      <p class="text-sm">{{ title }}</p>
       <p class="text-xxs self-end text-gray-400 font-light pb-1">{{ getDateString }}</p>
     </div>
     <div class="space-x-1">
@@ -17,11 +17,9 @@
 <script>
 export default {
   name: "TodoCard",
-  data() {
-    return {
-      message: "text",
-      date: new Date(),
-    };
+  props:{
+    title: String,
+    date: Date
   },
   computed: {
     getDateString() {

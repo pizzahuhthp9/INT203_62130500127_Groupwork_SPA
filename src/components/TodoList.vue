@@ -12,27 +12,20 @@
 
 <script>
 import TodoCard from "@/components/TodoCard.vue";
-import axios from "axios";
 export default {
   name: "TodoList",
   components: {
     TodoCard,
   },
-  data() {
-    return {
-      todos: null,
-    };
+  props:{
+      todos: Array
   },
   methods: {
     stringToDate(stringDate) {
       return new Date(stringDate);
     },
   },
-  mounted() {
-    axios.get("http://localhost:3000/todo").then((result) => {
-      this.todos = result.data;
-    });
-  },
+  
 };
 </script>
 

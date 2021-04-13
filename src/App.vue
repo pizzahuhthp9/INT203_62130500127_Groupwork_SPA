@@ -1,5 +1,5 @@
 <template>
-  <router-view class="mt-5"/>
+  <router-view class="mt-5 mx-40"/>
 </template>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-40">
+  <div>
     <todo-add @submit="post"></todo-add>
     <todo-list :todos="todos" class="mt-8" @delete="get"></todo-list>
   </div>
@@ -23,7 +23,6 @@ export default {
         date: date
       }).then(()=>{
         this.get();
-        console.log("post succesful");
       })
     },
     get(){

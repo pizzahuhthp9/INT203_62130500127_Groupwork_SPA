@@ -28,6 +28,7 @@ export default {
       } else{
         this.$emit("submit", this.title, this.date);
         this.errors = [];
+        this.title = null;
       }
     }
   },

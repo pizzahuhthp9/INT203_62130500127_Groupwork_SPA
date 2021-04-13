@@ -8,7 +8,7 @@
       <p class="text-xxs self-end text-gray-400 font-light pb-1">{{ getDateString }}</p>
     </div>
     <div class="space-x-1">
-        <button class="text-xxs p-0.5 bg-gray-400">edit</button>
+        <button class="text-xxs p-0.5 bg-gray-400" @click="edit">edit</button>
         <button class="text-xxs p-0.5 bg-red-500" @click="del">delete</button>
     </div>
   </div>
@@ -34,6 +34,9 @@ export default {
         this.$emit("delete");
         console.log("deleted");
       })
+    },
+    edit(){
+      this.$router.push(`/edit/${this.id}`);
     }
   },
 };

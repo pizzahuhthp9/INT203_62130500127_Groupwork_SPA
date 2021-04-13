@@ -1,7 +1,7 @@
 <template>
   <div class="mx-40">
     <todo-add @submit="post"></todo-add>
-    <todo-list :todos="todos" class="mt-8"></todo-list>
+    <todo-list :todos="todos" class="mt-8" @delete="get"></todo-list>
   </div>
 </template>
 

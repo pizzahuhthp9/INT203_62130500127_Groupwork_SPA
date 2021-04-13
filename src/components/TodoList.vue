@@ -1,6 +1,6 @@
 <template>
   <div id="todoList">
-    <todo-card
+    <todo-card @delete="del"
       v-for="todo in todos"
       :key="todo.id"
       :title="todo.title"
@@ -24,6 +24,9 @@ export default {
     stringToDate(stringDate) {
       return new Date(stringDate);
     },
+    del(){
+        this.$emit("delete");
+    }
   },
   
 };

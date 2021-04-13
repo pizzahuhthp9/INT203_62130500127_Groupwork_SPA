@@ -31,6 +31,7 @@ export default {
   methods: {
     del(){
       axios.delete("http://localhost:3000/todo/" + this.id).then(()=>{
+        this.$emit("delete");
         console.log("deleted");
       })
     }

@@ -1,6 +1,12 @@
 <template>
   <div id="todoList">
-    <todo-card v-for="(todo, index) in todos" :key="index" :title="todo.title" :date="stringToDate(todo.date)"></todo-card>
+    <todo-card
+      v-for="todo in todos"
+      :key="todo.id"
+      :title="todo.title"
+      :date="stringToDate(todo.date)"
+      :id="todo.id"
+    ></todo-card>
   </div>
 </template>
 

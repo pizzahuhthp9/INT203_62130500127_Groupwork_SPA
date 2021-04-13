@@ -25,8 +25,10 @@ export default {
     submit(){
       if (this.title == null || this.date == null) {
         this.errors.push("Please fill the information");
+      } else{
+        this.$emit("submit", this.title, this.date);
+        this.errors = [];
       }
-      this.$emit("submit", this.title, this.date);
     }
   },
 }
